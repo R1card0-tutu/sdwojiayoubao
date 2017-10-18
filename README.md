@@ -1,5 +1,5 @@
 # sdwojiayoubao
-## 在校期间的汉堡连锁店开发的一个简单门户网站。（企业官网）
+## Python开发企业官网。在校期间的汉堡连锁店开发的一个简单门户网站。（企业官网）
 ### Python2.7 , Django 1.8 , xadmin
 ###  www.sdwojiayoubao.com
 
