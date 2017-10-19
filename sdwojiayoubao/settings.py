@@ -33,6 +33,9 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+AUTHENTICATION_BACKENDS = (
+    'Users.views.CustomBackend',
+)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -45,6 +48,7 @@ INSTALLED_APPS = [
     'products',
     'crispy_forms',
     'xadmin',
+    'captcha',
 ]
 AUTH_USER_MODEL = "Users.UsersProfile"
 
@@ -134,8 +138,8 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/assets/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'assets')
+    os.path.join(BASE_DIR, 'static')
 ]
 
