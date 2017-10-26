@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 SECRET_KEY = 'mqb%bbbp+lgf+1h%&$^)za5#13!&$bhu@oy6s^m5g#(po)qq&m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -148,3 +148,5 @@ EMAIL_HOST_USER = "zhangzhenbeta@sina.com"
 EMAIL_HOST_PASSWORD = "Becauseyou12"
 EMAIL_USE_TLS = False
 EMAIL_FROM = "zhangzhenbeta@sina.com"
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
