@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <title>课程机构列表 - 慕学在线网</title>
+    <title>我家有堡 -在线下单</title>
     <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/static/css/animate.css">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
@@ -21,7 +21,7 @@
                 <div class="top">
                 <div class="wp">
                     <div class="fl">
-                        <p>服务电话：<b>33333333</b></p>
+                        <p>服务电话：<b>88888888888</b></p>
                     </div>
                     <!--登录后跳转-->
                     <div class="personal">
@@ -91,16 +91,16 @@
                 <div class="nav">
                     <div class="wp">
                         <ul>
-                            <li class="active"><a href="index.html">首页</a></li>
+                            <li class="active"><a href="{% url 'index' %}">首页</a></li>
                             <li>
-                                <a href="course-list.html">
-                                    公开课<img class="hot" src="/static/images/nav_hot.png">
+                                <a href="{% url 'product' %}">
+                                    产品信息<img class="hot" src="/static/images/nav_hot.png">
                                 </a>
                             </li>
-                            <li>
-                                <a href="teachers-list.html">授课教师</a>
-                            </li>
-                            <li><a href="org-list.html">授课机构</a></li>
+{#                            <li>#}
+{#                                <a href="teachers-list.html">授课教师</a>#}
+{#                            </li>#}
+{#                            <li><a href="org-list.html">授课机构</a></li>#}
                         </ul>
                     </div>
                 </div>
@@ -171,19 +171,19 @@
         <ul class="feature">
             <li class="feature1">
                 <img class="pic" src="/static/images/feature1.png"/>
-                <p class="center">专业权威</p>
+                <p class="center">线下门店</p>
             </li>
             <li class="feature2">
                 <img class="pic" src="/static/images/feature2.png"/>
-                <p class="center">课程最新</p>
+                <p class="center">最新单品</p>
             </li>
             <li class="feature3">
                 <img class="pic" src="/static/images/feature3.png"/>
-                <p class="center">名师授课</p>
+                <p class="center">物流信息</p>
             </li>
             <li class="feature4">
                 <img class="pic" src="/static/images/feature4.png"/>
-                <p class="center">数据真实</p>
+                <p class="center">生产保证</p>
             </li>
         </ul>
     </div>
@@ -193,12 +193,12 @@
 <section>
     <div class="module">
         <div class="wp">
-            <h1>公开课程</h1>
+            <h1>产品展示</h1>
             <div class="module1 eachmod">
                 <div class="module1_1 left">
                     <img width="228" height="614" src="/static/images/module1_1.jpg"/>
-                    <p class="fisrt_word">名师授课<br/>专业权威</p>
-                    <a class="more" href="course-list.html">查看更多课程 ></a>
+                    <p class="fisrt_word">我家有堡<br/>健康美味</p>
+                    <a class="more" href="course-list.html">查看更多产品 ></a>
                 </div>
                 <div class="right group_list">
                     <div class="module1_2 box">
@@ -575,15 +575,15 @@
                 <li class="code"><img src="/static/images/code.jpg"/>
                     <p class="center">扫描关注微信</p></li>
                 <li class="third"><img class="fl" src="/static/images/tell.png"/>
-                    <p class="tell">33333333</p>
+                    <p class="tell">8888888</p>
                     <p class="time">周一至周日 9:00-18:00</p></li>
             </ul>
 
         </div>
         <p class="line"></p>
         <div class="wp clear">
-            <span class="fl">? 2016 www.projectsedu.com 慕学在线-在线学习交流平台 保留所有权利</span>
-            <span class="fr">copyright ? 2016 ICP备案证书号：蜀ICP备xxxxx号-1</span>
+            <span class="fl">2017 www.sdwojiayoubao.com 山东我家有堡有限公司 保留所有权利</span>
+            <span class="fr">copyright  2016 ICP备案证书号：蜀ICP备xxxxx号-1</span>
         </div>
     </div>
 </footer>
