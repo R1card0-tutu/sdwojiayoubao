@@ -16,9 +16,13 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic import TemplateView
+from django.views.static import serve
 import xadmin
 
-from Users.views import LoginView, RegisterView, ActiveUserView, ProductView, ForgetPwdView, ResetView, ModifyPwdView
+from Users.views import LoginView, RegisterView, ActiveUserView, ForgetPwdView, ResetView, ModifyPwdView
+from products.views import ProductView
+from sdwojiayoubao.settings import MEDIA_ROOT
+
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
@@ -31,4 +35,6 @@ urlpatterns = [
     url(r'^forget/$', ForgetPwdView.as_view(), name="forget_pwd"),
     url(r'^reset/(?P<active_code>.*)/$', ResetView.as_view(), name='reset_pwd'),
     url(r'^modify_pwd/$', ModifyPwdView.as_view(), name="modify_pwd"),
+
+    url(r'^media/(?P<path>.*)$', serve, {"document_root":MEDIA_ROOT})
 ]

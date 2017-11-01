@@ -88,9 +88,7 @@ class ActiveUserView(View):
         return render(request, "login.html")
 
 
-class ProductView(View):
-    def get(self, request):
-        return render(request,"course-list.html")
+
 
 
 class ForgetPwdView(View):
