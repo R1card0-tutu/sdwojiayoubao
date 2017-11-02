@@ -80,45 +80,21 @@
                 <div class="right layout">
                     <div class="head">热门产品推荐</div>
                     <div class="group_recommend">
-
-                        <dl>
+                    {% for curent_product in hot_products %}
+                    <dl>
                             <dt>
                                 <a target="_blank" href="">
                                     <img width="240" height="220" class="scrollLoading"
-                                         src="{% static 'media/courses/2016/11/540e57300001d6d906000338-240-135_n0L8vbw.jpg' %}"/>
+                                         data-url="{{ MEDIA_URL }}{{ curent_product.image }}"/>
                                 </a>
                             </dt>
                             <dd>
-                                <a target="_blank" href=""><h2> django与vuejs实战项目2</h2></a>
-                                <span class="fl">难度：<i class="key">高级</i></span>
+                                <a target="_blank" href=""><h2> {{ curent_product.name }}</h2></a>
+                                <span class="fl">价格：<i class="key">{{ curent_product.prices }}</i></span>
                             </dd>
                         </dl>
+                    {% endfor %}
 
-                        <dl>
-                            <dt>
-                                <a target="_blank" href="">
-                                    <img width="240" height="220" class="scrollLoading"
-                                         src="{% static 'media/courses/2016/12/python面向对象.jpg' %}"/>
-                                </a>
-                            </dt>
-                            <dd>
-                                <a target="_blank" href=""><h2> python面向对象</h2></a>
-                                <span class="fl">难度：<i class="key">中级</i></span>
-                            </dd>
-                        </dl>
-
-                        <dl>
-                            <dt>
-                                <a target="_blank" href="">
-                                    <img width="240" height="220" class="scrollLoading"
-                                         src="{% static 'media/courses/2016/12/python文件处理.jpg' %}"/>
-                                </a>
-                            </dt>
-                            <dd>
-                                <a target="_blank" href=""><h2> python文件处理</h2></a>
-                                <span class="fl">难度：<i class="key">中级</i></span>
-                            </dd>
-                        </dl>
 
 
                     </div>

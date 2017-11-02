@@ -12,6 +12,7 @@ class ProductView(View):
     def get(self, request):
         all_products = Produce.objects.all()
         all_users = UsersProfile.objects.all()
+        hot_products = all_products.order_by('click_nums')[:3]
         #对产品进行分页
         try:
             page = request.GET.get('page', 1)
@@ -27,4 +28,5 @@ class ProductView(View):
         return render(request,"course-list.html", {
             "all_products":products,
             "all_users":all_users,
+            "hot_products":hot_products,
         })
