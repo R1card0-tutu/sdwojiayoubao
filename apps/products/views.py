@@ -21,7 +21,7 @@ class ProductView(View):
 
 
 
-        p = Paginator(all_products, 9, request=request)
+        p = Paginator(all_products, 6, request=request)
 
         products = p.page(page)
 

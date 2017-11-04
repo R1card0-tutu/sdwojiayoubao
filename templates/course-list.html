@@ -14,6 +14,7 @@
     <section>
         <div class="wp">
             <div class="list" style="margin-top:0;">
+
                 <div class="left layout">
                     <div class="head">
                         <ul class="tab_header">
@@ -29,7 +30,7 @@
                                     <div class="box">
                                         <a href="">
                                             <img width="280" height="350" class="scrollLoading"
-                                                 data-url="{{ MEDIA_URL }}{{ list_product.image }}"/>
+                                                 src="{{ MEDIA_URL }}{{ list_product.image }}"/>
                                         </a>
                                         <div class="des">
                                             <a href="">
@@ -77,6 +78,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="right layout">
                     <div class="head">热门产品推荐</div>
                     <div class="group_recommend">
@@ -85,7 +87,7 @@
                             <dt>
                                 <a target="_blank" href="">
                                     <img width="240" height="220" class="scrollLoading"
-                                         data-url="{{ MEDIA_URL }}{{ curent_product.image }}"/>
+                                         src="{{ MEDIA_URL }}{{ curent_product.image }}"/>
                                 </a>
                             </dt>
                             <dd>
