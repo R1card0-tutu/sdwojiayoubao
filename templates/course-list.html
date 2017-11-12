@@ -50,10 +50,10 @@
                             </div>
                             <div class="pageturn">
                                 <ul class="pagelist">
+
                                     {% if all_products.has_previous %}
                                         <li class="long"><a href="?{{ all_products.previous_page_number.querystring }}">上一页</a>
                                         </li>
-
                                     {% endif %}
 
                                     {% for page in all_products.pages %}
@@ -67,6 +67,7 @@
                                             <li class="none"><a href="">...</a></li>
                                         {% endif %}
                                     {% endfor %}
+
                                     {% if all_products.has_next %}
                                         <li class="long"><a
                                                 href="?{{ all_products.next_page_number.querystring }}">下一页</a></li>

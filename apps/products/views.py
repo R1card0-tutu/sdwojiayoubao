@@ -9,6 +9,9 @@ from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
 class ProductView(View):
+    """
+    产品列表
+    """
     def get(self, request):
         all_products = Produce.objects.all()
         all_users = UsersProfile.objects.all()
