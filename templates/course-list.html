@@ -28,19 +28,19 @@
                             <div class="group_list">
                                 {% for list_product in all_products.object_list %}
                                     <div class="box">
-                                        <a href="">
+                                        <a href="{% url 'product:product_detail' list_product.id %}">
                                             <img width="280" height="350" class="scrollLoading"
                                                  src="{{ MEDIA_URL }}{{ list_product.image }}"/>
                                         </a>
                                         <div class="des">
-                                            <a href="">
+                                            <a href="{% url 'product:product_detail' list_product.id %}">
                                                 <h2>{{ list_product.name }}</h2>
                                             </a>
                                             <span class="fl">价格：<i class="key">{{ list_product.prices }}</i></span>
                                             <span class="fr">购买人数：{{ list_product.buy_nums }}&nbsp;&nbsp;</span>
                                         </div>
                                         <div class="bottom">
-                                            <a href=""><span class="fl">我家有堡</span></a>
+                                            <a href="{% url 'product:product_detail' list_product.id %}"><span class="fl">我家有堡</span></a>
                                             <span class="starfrnotlogin" data-favid="15">点击数： {{ list_product.click_nums }}</span>
                                         </div>
                                     </div>

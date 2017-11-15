@@ -3,7 +3,7 @@
 import xadmin
 from xadmin import views
 
-from .models import UsersProfile, EmailVerifyRecord, Banner
+from .models import UsersProfile, EmailVerifyRecord, Banner, Introduction
 
 class BaseSetting(object):
     enable_themes = True
@@ -32,9 +32,16 @@ class BannerAdmin(object):
     search_fields = ['title', 'image', 'url', 'index']
     list_filter = ['title', 'image', 'url', 'index', 'add_time']
 
+class IntroductionAdmin(object):
+    list_display = ['companypost', 'name']
+    search_fields = ['companypost', 'name']
+    list_filter = ['companypost', 'name']
+    style_fields = {"companypost":"ueditor"}
+
 
 xadmin.site.register(EmailVerifyRecord, EmailVerifyRecordAdmin)
 xadmin.site.register(Banner, BannerAdmin)
 # xadmin.site.register(UsersProfile, UsersProfileAdmin)
 # xadmin.site.register(views.BaseAdminView, BaseSetting)
 xadmin.site.register(views.CommAdminView, GlobalSettings)
+xadmin.site.register(Introduction, IntroductionAdmin)

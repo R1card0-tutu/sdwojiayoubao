@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'xadmin',
     'captcha',
     'pure_pagination',
+    'DjangoUeditor',
 ]
 AUTH_USER_MODEL = "Users.UsersProfile"
 

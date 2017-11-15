@@ -6,7 +6,7 @@ from django.db.models import Q
 from django.views.generic.base import View
 from django.contrib.auth.hashers import make_password   # 对用户输入的明文进行加密
 
-from .models import UsersProfile, EmailVerifyRecord
+from .models import UsersProfile, EmailVerifyRecord, Introduction
 from .forms import LoginForm, RegisterForm, ForgetForm, ModifyPwdForm
 from utils.email_sned import send_register_email
 
@@ -135,5 +135,10 @@ class ModifyPwdView(View):
             email = request.POST.get("email", "")
             return render(request, "password_reset.html", {"email": email, "modify_form": modify_form})
 
-
+class IndexView(View):
+    def get(self, request):
+        introduce = Introduction.objects.get(id=1)
+        return render(request, "index.html", {
+            "introduce":introduce,
+        })
 

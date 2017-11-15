@@ -10,4 +10,5 @@ class ProcuceAdmin(object):
     search_files = ['name', 'desc', 'prices', 'buy_nums', 'detail', 'image', 'click_nums']
     list_filter = ['name', 'desc', 'prices', 'buy_nums', 'detail', 'image', 'click_nums', 'add_time']
 
+
 xadmin.site.register(Produce, ProcuceAdmin)

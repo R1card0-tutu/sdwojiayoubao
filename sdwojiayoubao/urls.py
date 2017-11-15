@@ -20,14 +20,13 @@ from django.views.generic import TemplateView
 from django.views.static import serve
 import xadmin
 
-from Users.views import LoginView, RegisterView, ActiveUserView, ForgetPwdView, ResetView, ModifyPwdView
-from products.views import ProductView
+from Users.views import LoginView, RegisterView, ActiveUserView, ForgetPwdView, ResetView, ModifyPwdView, IndexView
 from sdwojiayoubao.settings import MEDIA_ROOT
 
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
-    url(r'^$', TemplateView.as_view(template_name="index.html"), name='index'),
+    url(r'^$', IndexView.as_view(), name='index'),
     url(r'^login/$', LoginView.as_view(), name='login'),
     url(r'^register/$', RegisterView.as_view(), name='register'),
     url(r'^captcha/', include('captcha.urls')),
@@ -39,5 +38,7 @@ urlpatterns = [
     #配置上传文件的访问处理函数
     url(r'^media/(?P<path>.*)$', serve, {"document_root":MEDIA_ROOT}),
     # 产品首页
-    url(r'^product/$', ProductView.as_view(), name="product"),
+    url(r'^product/', include('products.urls', namespace="product")),
+
+    url(r'^ueditor/',include('DjangoUeditor.urls')),
 ]

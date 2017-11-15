@@ -8,7 +8,7 @@ from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 
 
 # Create your views here.
-class ProductView(View):
+class ProductListView(View):
     """
     产品列表
     """
@@ -32,4 +32,14 @@ class ProductView(View):
             "all_products":products,
             "all_users":all_users,
             "hot_products":hot_products,
+        })
+
+class ProductDetailView(View):
+    def get(self, request, product_id):
+
+        produce = Produce.objects.get(id=int(product_id))
+
+        return render(request, "course-detail.html", {
+                "produce":produce,
+
         })

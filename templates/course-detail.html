@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}sdwojiayoubao{% endblock %}
+{% block custom_bread %}
+<section>
+	<div class="wp">
+		<div class="crumbs">
+			<ul>
+				<li><a href="/">首页</a>></li>
+                <li><a href="{% url 'product:product_list' %}">产品</a>></li>
+				<li>产品详情</li>
+			</ul>
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+    <section>
+	<div class="wp">
+		<div class="groupPurchase_detail detail">
+			<div class="toppro">
+				<div class="left">
+					<div class="picbox">
+						<div class="tb-booth tb-pic">
+							<img width="440" height="445" src="{{ MEDIA_URL }}{{ produce.image }}" class="jqzoom" />
+						</div>
+
+					</div>
+					<div class="des">
+						<h1 title="django 从入门到精通体验开始了">{{ produce.name }}</h1>
+						<span class="key">{{ produce.detail }}</span>
+						<div class="prize">
+							<span class="fl">价格：<i class="key">{{ produce.prices }}</i></span>
+							<span class="fr">购买人数：{{ produce.buy_nums }}</span>
+						</div>
+						<ul class="parameter">
+{#							<li><span class="pram word3">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长：</span><span>0</span></li>#}
+                            <li><span class="pram word3">点&nbsp;击&nbsp;数：</span><span>{{ produce.click_nums }}</span></li>
+                            <li><span class="pram word3">简介：</span><span title="">{{ produce.desc }}</span></li>
+{#							<li class="piclist"><span class="pram word4">学习用户：</span>#}
+{##}
+{#                                    <span class="pic"><img width="40" height="40" src="../media/image/2016/12/default_big_14.png"/></span>#}
+{##}
+{#							</li>#}
+						</ul>
+						<div class="btns">
+							<div class="btn colectgroupbtn"  id="jsLeftBtn">
+                                  收藏
+                            </div>
+                                <div class="buy btn"><a style="color: white" href="">购买</a></div>
+						</div>
+					</div>
+                    <div class="group-share-box">
+                        <div class="bdsharebuttonbox"
+                             data-text="django开始了"
+                             data-desc="我在#慕课网#发现了"
+                             data-comment=""
+                             data-url="/group/groupdetail/15/">
+                            <span class="fl">分享到：</span>
+                            <a href="#" class="bds_more" data-cmd="more"></a>
+                            <a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a>
+                            <a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a>
+                            <a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a>
+                            <a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a>
+                            <a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a>
+                        </div>
+                    </div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="wp">
+		<div class="list groupPurchase_detail_pro">
+
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+
+

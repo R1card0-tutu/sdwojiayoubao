@@ -5,6 +5,8 @@ from datetime import datetime
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
+from DjangoUeditor.models import UEditorField
+
 # Create your models here.
 
 class UsersProfile(AbstractUser):
@@ -41,5 +43,19 @@ class Banner(models.Model):
     class Meta:
         verbose_name = u"轮播图"
         verbose_name_plural = verbose_name
+
+class Introduction(models.Model):
+    companypost = UEditorField(verbose_name=u'企业介绍',width=1000, height=600,
+                                imagePath="courses/ueditor/", filePath="courses/ueditor/",
+                                default='')
+    name = models.CharField(max_length=20, verbose_name=u"企业名")
+
+
+    class Meta:
+        verbose_name = u"企业介绍"
+        verbose_name_plural = verbose_name
+
+    def __unicode__(self):
+        return self.name
 
 
