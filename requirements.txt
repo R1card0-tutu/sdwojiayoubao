@@ -2,7 +2,7 @@ asn1crypto==0.23.0
 certifi==2017.7.27.1
 cffi==1.11.2
 chardet==3.0.4
-cryptography==2.1.1
+cryptography==3.2
 diff-match-patch==20121119
 Django==1.9
 django-crispy-forms==1.6.1
